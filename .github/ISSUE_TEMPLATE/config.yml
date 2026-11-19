@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Уязвимость в безопасности
+    url: https://github.com/RASTUf/evo-voice-releases/blob/main/SECURITY.md#сообщить-об-уязвимости
+    about: Не пишите об уязвимостях в открытые обращения. Как сообщить закрыто, написано здесь.
+  - name: Безопасность и приватность
+    url: https://github.com/RASTUf/evo-voice-releases/blob/main/SECURITY.md
+    about: Что программа делает, куда подключается и что хранит.

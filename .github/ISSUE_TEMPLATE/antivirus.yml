@@ -1,0 +1,47 @@
+name: Антивирус
+description: Антивирус ругается на установщик или программу
+title: "[Антивирус] "
+labels: ["антивирус"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Скачивайте программу только со страницы выпусков этого репозитория. Сначала сверьте SHA-256 файла с числом
+        на странице выпуска (как это сделать, написано в README). Если число не совпало, не запускайте файл и
+        напишите об этом здесь.
+  - type: input
+    id: antivirus
+    attributes:
+      label: Антивирус и его версия
+      placeholder: "Kaspersky Free 21.x"
+    validations:
+      required: true
+  - type: input
+    id: detection
+    attributes:
+      label: Название сработки
+      placeholder: "HEUR:Trojan.Win32.Generic"
+    validations:
+      required: true
+  - type: input
+    id: file
+    attributes:
+      label: На какой файл
+      placeholder: "EVO-VOICE-Setup-1.0.4.exe"
+    validations:
+      required: true
+  - type: input
+    id: sha
+    attributes:
+      label: SHA-256 файла
+    validations:
+      required: true
+  - type: dropdown
+    id: match
+    attributes:
+      label: Совпал ли SHA-256 с числом на странице выпуска
+      options:
+        - Да, совпал
+        - Нет, не совпал
+    validations:
+      required: true

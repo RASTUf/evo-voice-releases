@@ -1,0 +1,66 @@
+name: Ошибка
+description: Программа работает не так, как должна
+title: "[Ошибка] "
+labels: ["ошибка"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Спасибо, что сообщаете. Сначала проверьте, что стоит последняя версия, и поищите похожее обращение.
+        Не прикладывайте пароли, ключи и личные данные. Журнал программы просмотрите перед отправкой.
+  - type: input
+    id: version
+    attributes:
+      label: Версия EVO VOICE
+      description: Внизу слева в программе или в «Приложениях» Windows
+      placeholder: "1.0.4"
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Версия Windows
+      placeholder: "Windows 11 24H2"
+    validations:
+      required: true
+  - type: dropdown
+    id: engine
+    attributes:
+      label: Движок озвучки
+      options:
+        - Supertonic
+        - Qwen3
+        - Chatterbox
+        - ESpeech
+        - XTTS
+        - Не связано с озвучкой
+    validations:
+      required: true
+  - type: input
+    id: gpu
+    attributes:
+      label: Видеокарта
+      placeholder: "NVIDIA RTX 3060 12 ГБ / нет"
+  - type: textarea
+    id: steps
+    attributes:
+      label: Что вы делали
+      description: По шагам, чтобы можно было повторить
+      placeholder: |
+        1. Открыл «Библиотеку голосов»
+        2. Выбрал движок Qwen3
+        3. Нажал «Прослушать голос»
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Что произошло и что ожидали
+    validations:
+      required: true
+  - type: textarea
+    id: log
+    attributes:
+      label: Строки из журнала (по желанию)
+      description: 'Файл %APPDATA%\EVO VOICE\logs\app.log — последние строки рядом с ошибкой'
+      render: text

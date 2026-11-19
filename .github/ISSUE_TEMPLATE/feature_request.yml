@@ -1,0 +1,23 @@
+name: Идея
+description: Предложить новую функцию или улучшение
+title: "[Идея] "
+labels: ["идея"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Какую задачу это решит
+      description: Что сейчас неудобно или невозможно на стриме
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: Как это могло бы работать
+    validations:
+      required: true
+  - type: textarea
+    id: other
+    attributes:
+      label: Что ещё важно (по желанию)
+      description: Примеры из других программ, скриншоты
